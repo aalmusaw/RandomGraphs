@@ -1,0 +1,114 @@
+\hypertarget{class_random_edge}{}\doxysection{Random\+Edge$<$ Label, Data $>$ Class Template Reference}
+\label{class_random_edge}\index{RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}}
+
+
+{\ttfamily \#include $<$Random\+Edge.\+h$>$}
+
+Inheritance diagram for Random\+Edge$<$ Label, Data $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_random_edge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_random_edge_a68f25eae6c64c1ed8c3ace476730ecb8}{Random\+Edge}} ()
+\item 
+\mbox{\hyperlink{class_random_edge_ae76be72c289deaf6babb346e5565ab0d}{Random\+Edge}} (\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$end1, \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$end2, int min\+\_\+weight, int max\+\_\+weight, unsigned int seed)
+\item 
+virtual \mbox{\hyperlink{class_random_edge_a4a87aaa8351d32cd165d34952f9180dd}{$\sim$\+Random\+Edge}} ()
+\item 
+void \mbox{\hyperlink{class_random_edge_a1974485e1aad340d69a548055b00f950}{set\+\_\+random\+\_\+weight}} (unsigned int seed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_random_edge_a210bd18d13b7884f933cbcdb0f56efb3}\label{class_random_edge_a210bd18d13b7884f933cbcdb0f56efb3}} 
+int {\bfseries min\+\_\+weight}
+\item 
+\mbox{\Hypertarget{class_random_edge_a0a0bf545008edbd1bb3931b416d45e52}\label{class_random_edge_a0a0bf545008edbd1bb3931b416d45e52}} 
+int {\bfseries max\+\_\+weight}
+\item 
+\mbox{\Hypertarget{class_random_edge_a5bc589a3f9e13c377fdcc7ecad6189e3}\label{class_random_edge_a5bc589a3f9e13c377fdcc7ecad6189e3}} 
+unsigned int {\bfseries seed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Label, class Data$>$\newline
+class Random\+Edge$<$ Label, Data $>$}
+
+A derived specialized template class
+
+\mbox{\hyperlink{class_edge}{Edge}} weights are sampled from a distribution 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_random_edge_a68f25eae6c64c1ed8c3ace476730ecb8}\label{class_random_edge_a68f25eae6c64c1ed8c3ace476730ecb8}} 
+\index{RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}!RandomEdge@{RandomEdge}}
+\index{RandomEdge@{RandomEdge}!RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{RandomEdge()}{RandomEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Label , class Data $>$ \\
+\mbox{\hyperlink{class_random_edge}{Random\+Edge}}$<$ Label, Data $>$\+::\mbox{\hyperlink{class_random_edge}{Random\+Edge}}}
+
+Default Constructor
+
+Generates an edge randomly. The range of the weights is within the supported integers.
+
+Implementation of a random weighted graph edge
+
+\begin{DoxyAuthor}{Author}
+Ali Al-\/\+Musawi 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{class_random_edge_ae76be72c289deaf6babb346e5565ab0d}\label{class_random_edge_ae76be72c289deaf6babb346e5565ab0d}} 
+\index{RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}!RandomEdge@{RandomEdge}}
+\index{RandomEdge@{RandomEdge}!RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{RandomEdge()}{RandomEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Label , class Data $>$ \\
+\mbox{\hyperlink{class_random_edge}{Random\+Edge}}$<$ Label, Data $>$\+::\mbox{\hyperlink{class_random_edge}{Random\+Edge}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{end1,  }\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{end2,  }\item[{int}]{min\+\_\+weight,  }\item[{int}]{max\+\_\+weight,  }\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+Class Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em end1} & a pointer to a node on one end \\
+\hline
+{\em end2} & a pointer to a node on the other end \\
+\hline
+{\em min\+\_\+weight} & a minimum bound on the generated weight \\
+\hline
+{\em max\+\_\+weight} & a maximum bound on the generated weight \\
+\hline
+{\em seed} & a seed for reproducibility \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_random_edge_a4a87aaa8351d32cd165d34952f9180dd}\label{class_random_edge_a4a87aaa8351d32cd165d34952f9180dd}} 
+\index{RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}!````~RandomEdge@{$\sim$RandomEdge}}
+\index{````~RandomEdge@{$\sim$RandomEdge}!RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RandomEdge()}{~RandomEdge()}}
+{\footnotesize\ttfamily template$<$class Label , class Data $>$ \\
+\mbox{\hyperlink{class_random_edge}{Random\+Edge}}$<$ Label, Data $>$\+::$\sim$\mbox{\hyperlink{class_random_edge}{Random\+Edge}}\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Class Destructors 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_random_edge_a1974485e1aad340d69a548055b00f950}\label{class_random_edge_a1974485e1aad340d69a548055b00f950}} 
+\index{RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}!set\_random\_weight@{set\_random\_weight}}
+\index{set\_random\_weight@{set\_random\_weight}!RandomEdge$<$ Label, Data $>$@{RandomEdge$<$ Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{set\_random\_weight()}{set\_random\_weight()}}
+{\footnotesize\ttfamily template$<$class Label , class Data $>$ \\
+void \mbox{\hyperlink{class_random_edge}{Random\+Edge}}$<$ Label, Data $>$\+::set\+\_\+random\+\_\+weight (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+Resets the weight of this edge randomly
+
+The range of the weight is established during construction 
+\begin{DoxyParams}{Parameters}
+{\em seed} & a seed for reproducibility \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Random\+Edge.\+h\item 
+Random\+Edge.\+cpp\end{DoxyCompactItemize}

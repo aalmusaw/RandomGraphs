@@ -1,0 +1,337 @@
+\hypertarget{class_graph}{}\doxysection{Graph$<$ Weight, Label, Data $>$ Class Template Reference}
+\label{class_graph}\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_a7e8a49b4d3aa2547565c86d8328cb11f}{Graph}} ()
+\item 
+virtual \mbox{\hyperlink{class_graph_ac52c52ddfd9fca615084bfc8024cfb4d}{$\sim$\+Graph}} ()
+\item 
+\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ \mbox{\hyperlink{class_graph_a2d0761a378fdccaa8c2e0a973d1c6766}{get\+\_\+node}} (Label node\+\_\+label)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ $>$ \mbox{\hyperlink{class_graph_acc04f4d7a20bf9628113f8a4d937dc39}{list\+\_\+nodes}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_graph_a0c52fc5b8c9d8725a4314af9db40a439}{num\+\_\+nodes}} ()
+\item 
+\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$ \mbox{\hyperlink{class_graph_a6a627524f1f6030a69784831743157c5}{get\+\_\+edge}} (\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$from, \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$to)
+\item 
+unsigned int \mbox{\hyperlink{class_graph_a154337d5335dde2cc6c685ec64b6bc67}{num\+\_\+edges}} ()
+\item 
+bool \mbox{\hyperlink{class_graph_ad18834e5621740a9afd83e9323bb0a66}{is\+\_\+adjacent}} (\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$from, \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$to)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ $>$ \mbox{\hyperlink{class_graph_a39e162c1e91a300ac56ac1fed75ef74f}{neighbours}} (\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$node)
+\item 
+void \mbox{\hyperlink{class_graph_a2695e553e86832e3b68d7adf194f5ae0}{print\+\_\+graph}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a05bf3ae5ac1c9860270ec4bc0bf8b91c}{insert\+\_\+node}} (\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$node)
+\item 
+void \mbox{\hyperlink{class_graph_a7647731b7beaffe354cc8d7315d8327d}{insert\+\_\+edge}} (\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$edge)
+\item 
+void \mbox{\hyperlink{class_graph_a3a9cba839201a31215731e2ef402251c}{delete\+\_\+edge}} (\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$edge)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_ae8120902b8d4c7f88764020d68f97c6d}\label{class_graph_ae8120902b8d4c7f88764020d68f97c6d}} 
+unsigned int {\bfseries nodes}
+\item 
+\mbox{\Hypertarget{class_graph_abbbb5330836fc840ce2192bfc69fd085}\label{class_graph_abbbb5330836fc840ce2192bfc69fd085}} 
+unsigned int {\bfseries edges}
+\item 
+\mbox{\Hypertarget{class_graph_afa2de9ed25d1f57a78d0a5fbac34f0d4}\label{class_graph_afa2de9ed25d1f57a78d0a5fbac34f0d4}} 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ $>$ {\bfseries node\+\_\+list}
+\item 
+\mbox{\Hypertarget{class_graph_ad738490bf8c45909a72cd5d1138405e6}\label{class_graph_ad738490bf8c45909a72cd5d1138405e6}} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$ $>$ $>$ {\bfseries adjacency\+\_\+list}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class W , class L , class D $>$ }\\bool \mbox{\hyperlink{class_graph_abcbd873e03981391627f059fcbb22633}{node\+\_\+exists}} (\mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$node, \mbox{\hyperlink{class_graph}{Graph}}$<$ W, L, D $>$ $\ast$g)
+\item 
+{\footnotesize template$<$class W , class L , class D $>$ }\\bool \mbox{\hyperlink{class_graph_a6682246f2130eb1d0f52bf6724b0eb1f}{edge\+\_\+exists}} (\mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$from, \mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$to, \mbox{\hyperlink{class_graph}{Graph}}$<$ W, L, D $>$ $\ast$g)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Weight, class Label, class Data$>$\newline
+class Graph$<$ Weight, Label, Data $>$}
+
+A weighted graph
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Weight} & the class of the \mbox{\hyperlink{class_graph}{Graph}}\textquotesingle{}s \mbox{\hyperlink{class_edge}{Edge}} weight \\
+\hline
+{\em Label} & the class of the \mbox{\hyperlink{class_graph}{Graph}}\textquotesingle{}s \mbox{\hyperlink{class_node}{Node}} label \\
+\hline
+{\em Data} & the class of the \mbox{\hyperlink{class_graph}{Graph}}\textquotesingle{}s \mbox{\hyperlink{class_node}{Node}} data \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a7e8a49b4d3aa2547565c86d8328cb11f}\label{class_graph_a7e8a49b4d3aa2547565c86d8328cb11f}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+\mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::\mbox{\hyperlink{class_graph}{Graph}}}
+
+Default Constructor
+
+Generates an empty graph
+
+Implementation of a weighted graph
+
+\begin{DoxyAuthor}{Author}
+Ali Al-\/\+Musawi 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{class_graph_ac52c52ddfd9fca615084bfc8024cfb4d}\label{class_graph_ac52c52ddfd9fca615084bfc8024cfb4d}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!````~Graph@{$\sim$Graph}}
+\index{````~Graph@{$\sim$Graph}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Graph()}{~Graph()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+\mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::$\sim$\mbox{\hyperlink{class_graph}{Graph}}\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Class Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a3a9cba839201a31215731e2ef402251c}\label{class_graph_a3a9cba839201a31215731e2ef402251c}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!delete\_edge@{delete\_edge}}
+\index{delete\_edge@{delete\_edge}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{delete\_edge()}{delete\_edge()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+void \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::delete\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$}]{edge }\end{DoxyParamCaption})}
+
+Delete an \mbox{\hyperlink{class_edge}{Edge}} from this \mbox{\hyperlink{class_graph}{Graph}}
+
+If the supplies \mbox{\hyperlink{class_edge}{Edge}} is not in this \mbox{\hyperlink{class_graph}{Graph}}, nothing changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & a pointer to \mbox{\hyperlink{class_edge}{Edge}} of the \mbox{\hyperlink{class_edge}{Edge}} to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a6a627524f1f6030a69784831743157c5}\label{class_graph_a6a627524f1f6030a69784831743157c5}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!get\_edge@{get\_edge}}
+\index{get\_edge@{get\_edge}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{get\_edge()}{get\_edge()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$ \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::get\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{from,  }\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{to }\end{DoxyParamCaption})}
+
+Retrieves an \mbox{\hyperlink{class_edge}{Edge}} in this \mbox{\hyperlink{class_graph}{Graph}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & a pointer to a \mbox{\hyperlink{class_node}{Node}} in this \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+{\em to} & a pointer to a \mbox{\hyperlink{class_node}{Node}} in this \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \mbox{\hyperlink{class_edge}{Edge}} in this \mbox{\hyperlink{class_graph}{Graph}} connecting the supplied Nodes
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_graph_illegal_access_exception}{Graph\+Illegal\+Access\+Exception}}} & if the \mbox{\hyperlink{class_edge}{Edge}} is not in the \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_graph_a2d0761a378fdccaa8c2e0a973d1c6766}\label{class_graph_a2d0761a378fdccaa8c2e0a973d1c6766}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!get\_node@{get\_node}}
+\index{get\_node@{get\_node}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{get\_node()}{get\_node()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::get\+\_\+node (\begin{DoxyParamCaption}\item[{Label}]{node\+\_\+label }\end{DoxyParamCaption})}
+
+Retrieve a \mbox{\hyperlink{class_node}{Node}} from this \mbox{\hyperlink{class_graph}{Graph}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+label} & the label of the \mbox{\hyperlink{class_node}{Node}} to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the \mbox{\hyperlink{class_node}{Node}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_graph_illegal_access_exception}{Graph\+Illegal\+Access\+Exception}}} & if the \mbox{\hyperlink{class_node}{Node}} does not exist \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_graph_a7647731b7beaffe354cc8d7315d8327d}\label{class_graph_a7647731b7beaffe354cc8d7315d8327d}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!insert\_edge@{insert\_edge}}
+\index{insert\_edge@{insert\_edge}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_edge()}{insert\_edge()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+void \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::insert\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}}$<$ Weight, Label, Data $>$ $\ast$}]{edge }\end{DoxyParamCaption})}
+
+Add an \mbox{\hyperlink{class_edge}{Edge}} to this \mbox{\hyperlink{class_graph}{Graph}}
+
+Replaces an existing \mbox{\hyperlink{class_edge}{Edge}} if the added \mbox{\hyperlink{class_edge}{Edge}}\textquotesingle{}s endpoints are already connected 
+\begin{DoxyParams}{Parameters}
+{\em edge} & a pointer to \mbox{\hyperlink{class_edge}{Edge}} of the inserted \mbox{\hyperlink{class_edge}{Edge}} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_graph_invalid_insertion_exception}{Graph\+Invalid\+Insertion\+Exception}}} & if at least one \mbox{\hyperlink{class_node}{Node}} on this \mbox{\hyperlink{class_edge}{Edge}} does not exist in the \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_graph_a05bf3ae5ac1c9860270ec4bc0bf8b91c}\label{class_graph_a05bf3ae5ac1c9860270ec4bc0bf8b91c}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!insert\_node@{insert\_node}}
+\index{insert\_node@{insert\_node}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_node()}{insert\_node()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+void \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::insert\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+Adds a \mbox{\hyperlink{class_node}{Node}} to this \mbox{\hyperlink{class_graph}{Graph}}
+
+Replaces an existing \mbox{\hyperlink{class_node}{Node}} if the Label is the same
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & a pointer to \mbox{\hyperlink{class_node}{Node}} of the inserted \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ad18834e5621740a9afd83e9323bb0a66}\label{class_graph_ad18834e5621740a9afd83e9323bb0a66}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!is\_adjacent@{is\_adjacent}}
+\index{is\_adjacent@{is\_adjacent}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{is\_adjacent()}{is\_adjacent()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+bool \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::is\+\_\+adjacent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{from,  }\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{to }\end{DoxyParamCaption})}
+
+Checks if 2 Nodes are connected by an \mbox{\hyperlink{class_edge}{Edge}} in this \mbox{\hyperlink{class_graph}{Graph}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & a pointer to \mbox{\hyperlink{class_node}{Node}} in this \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+{\em to} & a pointer to \mbox{\hyperlink{class_node}{Node}} in this \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is an \mbox{\hyperlink{class_edge}{Edge}} connecting the Nodes in this \mbox{\hyperlink{class_graph}{Graph}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_acc04f4d7a20bf9628113f8a4d937dc39}\label{class_graph_acc04f4d7a20bf9628113f8a4d937dc39}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!list\_nodes@{list\_nodes}}
+\index{list\_nodes@{list\_nodes}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{list\_nodes()}{list\_nodes()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ $>$ \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::list\+\_\+nodes}
+
+Retrieves a list of all Nodes in this \mbox{\hyperlink{class_graph}{Graph}}
+
+\begin{DoxyReturn}{Returns}
+a Vector of pointers to \mbox{\hyperlink{class_node}{Node}} for all Nodes in this \mbox{\hyperlink{class_graph}{Graph}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a39e162c1e91a300ac56ac1fed75ef74f}\label{class_graph_a39e162c1e91a300ac56ac1fed75ef74f}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{neighbours()}{neighbours()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$ $>$ \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::neighbours (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ Label, Data $>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+Lists all Nodes that are neighbours of the given \mbox{\hyperlink{class_node}{Node}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & a pointer to \mbox{\hyperlink{class_node}{Node}} whose neighbours are wanted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Vector of pointers to \mbox{\hyperlink{class_node}{Node}} neighbouring the given \mbox{\hyperlink{class_node}{Node}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_graph_illegal_access_exception}{Graph\+Illegal\+Access\+Exception}}} & if the given \mbox{\hyperlink{class_node}{Node}} is not in the \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_graph_a154337d5335dde2cc6c685ec64b6bc67}\label{class_graph_a154337d5335dde2cc6c685ec64b6bc67}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!num\_edges@{num\_edges}}
+\index{num\_edges@{num\_edges}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{num\_edges()}{num\_edges()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+unsigned int \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::num\+\_\+edges}
+
+The number of Edges in this \mbox{\hyperlink{class_graph}{Graph}}
+
+\begin{DoxyReturn}{Returns}
+the number of Edges in this \mbox{\hyperlink{class_graph}{Graph}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a0c52fc5b8c9d8725a4314af9db40a439}\label{class_graph_a0c52fc5b8c9d8725a4314af9db40a439}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!num\_nodes@{num\_nodes}}
+\index{num\_nodes@{num\_nodes}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{num\_nodes()}{num\_nodes()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+unsigned int \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::num\+\_\+nodes}
+
+The size of this \mbox{\hyperlink{class_graph}{Graph}}
+
+\begin{DoxyReturn}{Returns}
+the number of Nodes in this \mbox{\hyperlink{class_graph}{Graph}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a2695e553e86832e3b68d7adf194f5ae0}\label{class_graph_a2695e553e86832e3b68d7adf194f5ae0}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!print\_graph@{print\_graph}}
+\index{print\_graph@{print\_graph}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{print\_graph()}{print\_graph()}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+void \mbox{\hyperlink{class_graph}{Graph}}$<$ Weight, Label, Data $>$\+::print\+\_\+graph}
+
+A text representation of the graph
+
+Displays the adjacency matrix 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_graph_a6682246f2130eb1d0f52bf6724b0eb1f}\label{class_graph_a6682246f2130eb1d0f52bf6724b0eb1f}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!edge\_exists@{edge\_exists}}
+\index{edge\_exists@{edge\_exists}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{edge\_exists}{edge\_exists}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+template$<$class W , class L , class D $>$ \\
+bool edge\+\_\+exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$}]{from,  }\item[{\mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$}]{to,  }\item[{\mbox{\hyperlink{class_graph}{Graph}}$<$ W, L, D $>$ $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Helper Method\+: Indicates whether an edge exists in a graph
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & a pointer to \mbox{\hyperlink{class_node}{Node}} forming one end point of the \mbox{\hyperlink{class_edge}{Edge}} to look for \\
+\hline
+{\em to} & a pointer to \mbox{\hyperlink{class_node}{Node}} forming another end point of the \mbox{\hyperlink{class_edge}{Edge}} to look for \\
+\hline
+{\em graph} & a pointer to \mbox{\hyperlink{class_graph}{Graph}} to search in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if edge is in this graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_abcbd873e03981391627f059fcbb22633}\label{class_graph_abcbd873e03981391627f059fcbb22633}} 
+\index{Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}!node\_exists@{node\_exists}}
+\index{node\_exists@{node\_exists}!Graph$<$ Weight, Label, Data $>$@{Graph$<$ Weight, Label, Data $>$}}
+\doxysubsubsection{\texorpdfstring{node\_exists}{node\_exists}}
+{\footnotesize\ttfamily template$<$class Weight , class Label , class Data $>$ \\
+template$<$class W , class L , class D $>$ \\
+bool node\+\_\+exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}$<$ L, D $>$ $\ast$}]{node,  }\item[{\mbox{\hyperlink{class_graph}{Graph}}$<$ W, L, D $>$ $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Helper Method\+: Indicates whether a node exists in a graph
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & a pointer to \mbox{\hyperlink{class_node}{Node}} to search for in this graph \\
+\hline
+{\em graph} & a pointer to \mbox{\hyperlink{class_graph}{Graph}} to search in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if node is in this graph 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}

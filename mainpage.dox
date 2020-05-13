@@ -1,0 +1,36 @@
+/** \mainpage Random Graphs API
+ *
+ * \section intro_sec Introduction
+ *
+ * In this project, I create highly re-usable classes
+ * using class templates to build random graphs, which
+ * have the ability to store integers at the nodes, which
+ * themselves are labelled by integers. Additionally, the
+ * edges are weighted by randomly generated integers according
+ * to user-supplied range. Here, two components are random:
+ *
+ *		-# Graph Structure: Nodes are connected arbitarily.
+ *		-# Edge Weights: Edges are weighted arbitarily.
+ *
+ * The Node, Edge, and Graph class templates provide high reusability
+ * by allowing to store a variety of data types. 
+ *
+ * \section notes Miscellaneous Notes
+ *
+ * \subsection note1 Class Hierarchy
+ * 
+ * A single Edge is composed of two Node objects. A RandomEdge object
+ * extends an Edge object. A Graph object is composed of zero or more 
+ * Edge objects. Finally, a RandomGraph object extends a Graph object.
+ *
+ * \subsection note2 Template Instantiation
+ * 
+ * At the time of writing the implementation files, the compiler I used
+ * did not allow implicit instantiation of class templates. Therefore,
+ * at the end of several .cpp files, I explicitly instantiated the most
+ * common combinations of classes. Of course, this is far from ideal of 
+ * a solution. It might also slow down compilation. You may uncomment those
+ * parts if you plan to re-use the code. Moreover, it may be possible to
+ * live without these lines if your compiler allows implicit instantiation.
+ *
+ */
